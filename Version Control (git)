@@ -1,0 +1,32 @@
+Version Control (git)
+
+●	Use a remote git repository – Hint: your interview notes and example code would be excellent	
+
+●	git usage – commit, push, pull, branching, tagging, etc...
+
+  - Here are the Git commands which are being covered:
+
+    git config
+    git init
+    git clone
+    git add
+    git commit
+    git diff
+    git reset
+    git status
+    git rm
+    git log
+    git show
+    git tag
+    git branch
+    git checkout
+    git merge
+    git remote
+    git push
+    git pull
+    git stash
+		
+		- https://dzone.com/articles/top-20-git-commands-with-examples
+
+●	Explain collaboration via git
+ - Collaboration is a system used to make it so that a group of people can work on a project together pushing and pulling parts of said project that all can workon and share said results. 
