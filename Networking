@@ -1,0 +1,39 @@
+General Networking
+
+●	Ethernet, Infiniband, VLAN
+  - Ethernet
+    - physical networking system used by hard wired computing system. Using variety of connection medium of copper wired cables. 
+  -Infiniband
+    - A networking standard for high permformance networks that provides high thougput with low lantency. Used for data interconnected bewttwen computers. 
+  - Vlan
+    - Virtual local area network
+      - this is a set up on a router or switch that lets a network have mutiple separate networks.  This can be used so that different areas of a site can have there own network setup but not have to have multiple routers and switches. This is usually done on switches but if a router has the capability of a switch it can be done there also. 
+●	IPv4, IPv6, TCP, UDP.
+   -IPv4
+    - system for networking devices.
+    - uses numbers in the following format 192.128.1.1
+    - Uses a subnet to allow multiple devices on to a network with in a range of set network addresses by making it so we can split the address out more than if using the main ip address only. 
+   -IPv6
+    - Uses Hexadecimal addresses for networking. Provides a larger amount of addresses than Ipv4. 
+    - Was developed to take over once ipv4 runs out of addresses. 
+●	Routing, NAT
+    -Routing
+      - Routers and switches are used to for routing addresses to the internet and intranet.  Routers handle the over all network and host the main address and subnet of the network. Switches are used to add more devices to the system and allow the creation of vlans.  Subnetting is used to have multiple networks and many switches can subnet on there own.  It is possible to manually create a network by creating subnet so that addresses are tracked for security purposes. 
+     -NAT
+      - Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device.[1] The technique was originally used to avoid the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced, but could not route the networks address space. It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion. One Internet-routable IP address of a NAT gateway can be used for an entire private network.[2] 
+      
+●	DNS, HTTP
+  -DNS
+    - Domain Name System - Translates word based names into there ip addresses for the internet. 
+  -Http
+    - Hypertext Transfer Protocol (HTTP) is an application-layer protocol for transmitting hypermedia documents, such as HTML. It was designed for communication between web browsers and web servers, but it can also be used for other purposes.
+
+●	SFP+ vs Optics; single mode vs multi-mode
+    - SFP+ means enhanced small form-factor pluggable, is an enhanced version of the SFP that supports data rates up to 16 Gbit/s. SFP+ supports 8 Gbit/s Fibre Channel, 10 Gigabit Ethernet and Optical Transport Network standard OTU2. It is a popular industry format supported by many network component vendors.
+    - Single Mode - Fiber line that can only have one set of traffic going through it 
+    - Multimode -  fiber line that can host mutiple sets of traffic/packets by bouncing the data stream along its cable at different frequences. 
+●	Firewalls, packet captures, etc.
+    - Firewalls is software that monitors network traffic coming into a network and can block any kind of traffic that is listed as not wanted or harmful. This is done by setting up firewall rules. 
+    - Packet caputures are tools that are used to capture network packets so that they can be reviewed.  this can be harmful has private and confidential information can be sniffed out this way if it comes through the network in plain text. 
+    
+  
