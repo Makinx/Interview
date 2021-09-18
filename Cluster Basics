@@ -1,0 +1,10 @@
+Cluster Basics
+●	Cluster job scheduling (SLURM)	
+	- https://slurm.schedmd.com/quickstart.html
+	-https://slurm.schedmd.com/sched_config.html
+	- http://docs.rnet.missouri.edu/files/linux-cluster-202107.pdf
+	
+●	Job control - Interactive vs batch
+●	Writing jobfiles to utilize multiple cores and nodes and other resources in a shared cluster.	
+●	Different types of parallelization 
+●	Storage systems and their use and relative performance and cost.
