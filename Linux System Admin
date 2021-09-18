@@ -1,0 +1,131 @@
+Linux System Administration
+●	Patching strategies, OS and software version management.	
+    -Patching can be done manually or using a automation route.  
+       -manually - by downloading patches and manually installing them on each individual device
+          sudo apt-get update.
+          sudo apt-get upgrade.
+          sudo apt-get dist-upgrade.
+          yum check-update.
+          yum update.
+          zypper check-update.
+           zypper update.
+       -Automation - by using a third party tool you can setup patching on multiple devices to run at a later date and it can be monitored.
+       -Show patches installed
+          rpm -qa shows all the packages installed
+    -Type any one of the following command to find os name and version in Linux:
+      cat /etc/os-release
+      lsb_release -a
+      hostnamectl
+    -Type the following command to find Linux kernel version:
+        uname -r
+
+●	System Health - up-time, users, load of individual node.
+    - uptime command – Tell how long the Linux system has been running.
+    - w command – Show who is logged on and what they are doing including the uptime of a Linux box.
+    - top command – Display Linux server processes and display system Uptime in Linux too.
+
+●	System accounting -Users, Groups, POSIX security, ACLs
+    - ACL
+      - Format for permission types is Read (r) Write (w) Execute (x).  For example, rwxrwxrwx (OwnerGroupOther) Other can mean global access. 
+      - ls -l - will list users and there rights to said folder or file 
+      - Command used for user/group permissions to folders and files. Can be done on folder level or personal file level.  One can have access to a file but not a folder
+        List of commands for setting up ACL :
+
+           1) To add permission for user
+                setfacl -m "u:user:permissions" /path/to/file
+
+           2) To add permissions for a group
+                setfacl -m "g:group:permissions" /path/to/file 
+
+            3) To allow all files or directories to inherit ACL entries from the directory it is within
+                setfacl -dm "entry" /path/to/dir
+
+            4) To remove a specific entry
+                setfacl -x "entry" /path/to/file
+
+            5) To remove all entries
+                setfacl -b path/to/file
+        
+    - Groups
+      - groupadd [OPTIONS] GROUPNAME
+      - -f to force creation
+      - Use the -g (--gid) option to create a group with a specific GID.
+       - For example to create a group named mygroup with GID of 1010 you would type:
+        - groupadd -g 1010 mygroup
+       - When used with the -o (--non-unique) option the groupadd command allows you to create a group with non-unique GID:
+        - groupadd -o -g 1010 mygroup
+    - Hardware
+      
+    
+        
+●	Hardware - RAM, CPU, network, disk.
+      -CPU
+       - lscpu
+      2. lshw - List Hardware
+      3. hwinfo - Hardware Information
+      4. lspci - List PCI
+      5. lsscsi - List scsi devices
+      6. lsusb - List usb buses and device details
+      8. lsblk - List block devices
+      9. df - disk space of file systems
+      11. fdisk
+      - free -m - Check Ram Amount
+      16. hdparm - Commands gets information about sata devices
+        - example - sudo hdparm -i /dev/sda
+
+●	Network - IP, subnet, routes, multiple fabrics, IPv6
+   
+    ping: Checks network connectivity
+
+    ifconfig: Displays the configuration for a network interface
+
+    traceroute: Shows the path taken to reach a host
+
+    route: Displays the routing table and/or lets you configure it
+
+    arp: Shows the address resolution table and/or lets you configure it
+
+    netstat: Displays the status of the network
+    - multiple fabrics
+      - https://www.linuxjournal.com/content/fabric-system-administrators-best-friend
+  
+●	Security - firewalld, SELinux, hardening strategies, Bro
+    -firewalld
+      - https://www.redhat.com/sysadmin/beginners-guide-firewalld
+      
+    -selinux
+      -https://www.redhat.com/en/topics/linux/what-is-selinux
+      
+    - hardening strategies
+      - Implementation of Security Policies and protocals to sytems along with use of firewalls and best practice standards. 
+      
+    -BRO
+         - Bro is a free open source Unix based network analysis framework started by Vern Paxson. Bro provides a comprehensive platform for collecting network measurements, conducting forensic investigations and traffic baselining
+      
+●	Configuration Management (Puppet, Frabric, SaltStack) and provisioning (Razor, Foreman)
+  - Puppet
+    - An automation tool used to permform admin task such as adding users, installing packages and updates. 
+    - Puppet uses a declarative language or Ruby to describe the system configuration. It is organized in modules, and manifest files contain the desired-state goals to keep everything as required. Puppet uses the push model by default, and the pull model can be configured.
+    
+  - SaltStack
+    - Tool is used by making salt scripts to do various tasks.
+    - https://www.tutorialspoint.com/saltstack/saltstack_configuration_management.htm
+    
+  - Frabric
+    - another automation tool. 
+    - is a python libary and command line tool for stramling to use of ssh for application deployment
+    - https://code.tutsplus.com/tutorials/getting-started-with-the-fabric-python-library--cms-30555
+  
+●	Logging
+    - /var/log - directory for logs on linux
+    - to access cd /var/log
+    - Syslog - located at /dev/log
+    - https://www.loggly.com/ultimate-guide/linux-logging-basics/
+    
+●	Virtualization
+      - Linux virtualization refers to a process where more than one virtual machine can be installed in the Linux operating system.It helps in the collaboration of the hardware and software resources of the Linux operating Software.
+      - The Three Types of Virtualization
+
+        -According to a Research and Markets report, client virtualization is expected to drive continual growth in the IT sector. ...
+        -Virtual Desktop Infrastructure (VDI) ...
+        -Application virtualization.
